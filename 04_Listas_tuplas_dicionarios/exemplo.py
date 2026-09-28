@@ -65,23 +65,60 @@ for nota in notas:
     soma = soma + nota
 
 media = soma / len(notas)
-print(f"Média: {media}"
+print(f"Média: {media}")
 
 # 11. Tuplas
 # Tuplas são semelhantes às listas. As tuplas não podem ser alteradas.
 
-coodernadas = (10, 20)
-print(coodernadas)
+coordenadas = (10, 20)
+print(coordenadas)
 
-print(coodernadas[0])
+print(coordenadas[0])
 
-#12 Dicionários
+# 12. Dicionários
+# Dicionários armazenam informações no formato: chave: valor
 
-#Dicinários armazenam informações no formato: chave: valor
 aluno = {
     "nome": "Carlos",
     "idade": 17,
-    "nota": 8.5
+    "nota": 8
 }
 
 print(aluno)
+
+# 13. Acessando valores do dicionário
+
+print(aluno["nome"])
+print(aluno["idade"])
+print(aluno["nota"])
+
+# 14. Alterando valores
+
+aluno ["nota"] = 9
+print(aluno)
+
+# 15. Adicionando novos dados
+aluno["curso"] = "informatica"
+print(aluno)
+
+# 16. Removendo dados
+del aluno["curso"]
+print(aluno)
+
+# 17. percorrendo um dicionario
+
+for chave, valor in aluno.items():
+    print(f"{chave}: {valor}")
+
+# 18. Verificando chave
+
+if "nome" in aluno:
+    print("A chave nome existe.")
+
+# 19. Dicionario com Lista
+
+aluno = {
+    "nome": "Ana",
+    "notas": [8.0, 7.5, 9.0]
+
+}
