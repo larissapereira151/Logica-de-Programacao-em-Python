@@ -43,3 +43,27 @@ try:
     print(ana.__salario)
 except AttributeError:
     print("O atributo __salario não pode ser acessado de fora.")
+
+#Herança
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, equipe):
+        super().__init__(nome, salario)
+        self.equipe = equipe
+
+    def mostrar_equipe(self):
+        print(f" {self.nome} gerencia {self.equipe}")
+
+class Estagiario(Funcionario):
+    def __init__(self, nome, salario, curso):
+        super().__init__(nome, salario)
+        self.curso = curso
+
+
+print("\n=====HERANÇA======")
+bruno = Gerente("bruno", 8000, 5)
+caio = Estagiario("caio", 1500, "Analise")
+
+bruno.apresentar()
+caio.apresentar()
+
+bruno.mostrar_equipe()
